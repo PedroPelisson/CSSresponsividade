@@ -5,9 +5,10 @@
 }
 
 body {
-    background-color: rgb(236, 238, 241);
+    background-color: rgb(201, 205, 209);
     padding: 1em;
     display: grid;
+    gap: 1rem   ;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
@@ -20,200 +21,164 @@ body {
 
 header {
     grid-area: header;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
-header>nav>a {
-    text-decoration: none;
-    color: black;
-    margin: 2em;
-}
-
-section#home {
+.home {
     grid-area: home;
-    display: flex;
-    justify-content: center;
     width: 100%;
-    border-radius: 1em;
 }
 
-section#home>img {
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    border-radius: 0.5em;
-    margin: 1em 0;
+.depoimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    grid-area: depoimento;
 }
 
-section#sobre {
+.contato {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    grid-area: sobre;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-
-section#sobre>div>h2 {
-    font: bold 1.2rem arial;
-}
-
-section#sobre>div>p {
-    font: normal 1rem;
-    color: gray;
-    margin: 1rem 0;
-}
-
-section#sobre>button {
-    background-color: rgb(255, 92, 49);
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-section#servicos {
-    display: grid;
-    gap: 1rem;
-    grid-area: servicos;
-    margin-left: 1rem;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-
-section#servicos>h2 {
-    font: bold 1.2rem arial;
-    padding: 1rem 1rem 0 1rem;
-}
-
-section#servicos>article {
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-section#servicos>article>p {
-    color: gray;
-    margin: 1rem 0;
-}
-
-section#servicos>article>button {
-    border: 0.15rem solid rgb(255, 92, 49);
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 92, 49);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-section#depoimentos {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    gap: 1rem;
-    grid-area: depoimento;
-    margin-top: 1rem;
-    border-radius: 1rem;
-    color: black;
-}
-
-section#depoimentos>article {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-
-section#depoimentos>article>h3 {
-    font: bold 1.2rem arial;
-}
-
-section#depoimentos>article>h6 {
-    font: italic.75rem arial;
-    color: gray;
-    margin-bottom: 1rem;
-}
-
-section#contato {
     grid-area: footer;
-    background-color: white;
-    margin: 1rem 0;
+}
+
+
+
+.caixa {
     padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 0.5em;
 }
 
-section#contato>h3 {
-    font: bold 1.2rem arial;
-    margin-bottom: 1rem;
-}
-
-section#contato>form {
+.menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    font: normal 1rem arial;
+    color: black;
+    text-decoration: none;
+    padding: 0;
 }
 
-section#contato>form>input {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: rgba(128, 128, 128, 0.2);
+.menu__button {
     margin: 0 1rem;
 }
 
-section#contato>form>button {
-    padding: 0.5rem 2rem;
+.menu.menu__button--active {
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
+    border-radius: 0;
+    padding: 1rem 2rem;
+}
+
+img {
+    display: flex;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    grid-area: sobre;
+    justify-content: space-between;
+}
+
+.depoimentos--p {
+    margin-bottom: 0;
+}
+
+.titulo {
+    font: bold 1.2rem arial;
+}
+
+.subtitulo {
+    margin: 2rem 0 1rem 0;
+}
+
+p {
+    color: gray;
+    margin: 1rem 0;
+}
+
+h6 {
+    color: gray;
+    font: italic 0.8rem arial;
+}
+
+.btn {
+    background-color: orangered;
     border: none;
     border-radius: 0.5rem;
-    background-color: rgb(255, 92, 49);
     color: white;
+    padding: 0.5rem 0;
     width: 100%;
 }
 
-section#contato>div {
+.btn--vazado {
+    border: solid 0.15rem orangered;
+    background-color: rgba(255, 255, 255, 0);
+    color: orangered;
+}
+
+.titulo--centralizado {
     display: flex;
     justify-content: center;
 }
 
-section#contato>div>nav>a {
-    display: inline;
-    margin-left: 1rem;
-    color: rgb(255, 92, 49);
+input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.2);
+    margin: 0 2rem 0 0.5rem;
+    width: 100%;
 }
 
+form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+}
 
+@media screen and (max-width: 822px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "home"
+            "sobre"
+            "servicos"
+            "depoimento"
+            "footer";
+    }
+    .depoimentos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
-@media screen and (max-width: 600px) {
+    .contato {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    form {
+        display: block;
+    }
+
+    input {
+        margin: 0.5rem 0 1rem 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 523px) {
     * {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
-
-}
-
-@media screen and (max-width: 932px) {
-
-    section#contato>form>input {
-        width: 7rem;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-
-    section#contato>form>input {
-        width: 5rem;
-    }
-
 }
